@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="Seguimiento" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="seguimiento"/>
+			<item value="close"/>
+			<item value="dash"/>
+			<item value="diagram"/>
+			<item value="create"/>
+			<item value="Apps"/>
+			<item value="Reports"/>
+			<item value="Reports "/>
+			<item value="Repor"/>
+			<item value="Action"/>
+			<item value="logou"/>
+			<item value="log"/>
+			<item value="Messa"/>
+			<item value="Mensajes"/>
+			<item value="Activi"/>
+		</list>
+		<list key="replacehistory">
+			<item value="Buscar..."/>
+			<item value="@{/"/>
+			<item value="th:src=&quot;"/>
+			<item value="/assets"/>
+			<item value="th:src={"/>
+			<item value="th:src=&quot;{"/>
+			<item value="th:src=&quot;{/"/>
+			<item value="th:src"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="348" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|8.861539|0|WINDOWS|1|-16|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="468" key="DIALOG_HEIGHT"/>
+		<item value="1581" key="DIALOG_X_ORIGIN"/>
+		<item value="176" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
