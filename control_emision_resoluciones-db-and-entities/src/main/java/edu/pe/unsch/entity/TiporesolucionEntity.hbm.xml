@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="edu.pe.unsch.entity.TiporesolucionEntity" table="tiporesolucion" schema="cer-db">
+        <id name="idTipoResolucion" column="id_tipo_resolucion"/>
+        <property name="tipoResolucion" column="tipo_resolucion"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="edu.pe.unsch.entity.AdjuntoEntity" table="adjunto" schema="cer-db">
+        <composite-id mapped="true" class="edu.pe.unsch.entity.AdjuntoEntityPK">
+            <key-property name="idDocumento" column="id_documento"/>
+            <key-property name="idDocumentoAdjunto" column="id_documento_adjunto"/>
+        </composite-id>
+    </class>
+</hibernate-mapping>

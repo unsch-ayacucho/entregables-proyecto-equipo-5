@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="edu.pe.unsch.entity.OficioEntity" table="oficio" schema="cer-db">
+        <id name="idOficio" column="id_oficio"/>
+        <property name="idDocumento" column="id_documento"/>
+        <property name="membrete" column="membrete"/>
+        <property name="asunto" column="asunto"/>
+        <property name="despedida" column="despedida"/>
+    </class>
+</hibernate-mapping>
