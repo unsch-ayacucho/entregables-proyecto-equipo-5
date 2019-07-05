@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 04-jul-2019 20:41:26 by Hibernate Tools 5.1.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="cer_db" dynamic-insert="false" dynamic-update="false" mutable="true" name="pe.edu.unsch.entity.Solicitud" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="solicitud">
+        <id name="idSolicitud" type="java.lang.Integer">
+            <column name="id_solicitud"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="idDocumento" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="id_documento" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="sumilla" optimistic-lock="true" type="string" unique="false">
+            <column name="sumilla" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="lugar" optimistic-lock="true" type="string" unique="false">
+            <column name="lugar" not-null="true"/>
+        </property>
+        <one-to-one class="pe.edu.unsch.entity.Documento" constrained="false" embed-xml="true" name="documento"/>
+    </class>
+</hibernate-mapping>

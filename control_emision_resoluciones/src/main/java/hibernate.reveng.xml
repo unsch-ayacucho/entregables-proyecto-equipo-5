@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="adjunto" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="consideracion" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="consideracionresolucion"
+		match-catalog="cer_db">
+	</table-filter>
+	<table-filter match-name="datoadicional" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="decreto" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="decretosresolucion"
+		match-catalog="cer_db">
+	</table-filter>
+	<table-filter match-name="destinatario" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="detalledocumento"
+		match-catalog="cer_db">
+	</table-filter>
+	<table-filter match-name="documento" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="documentoadjunto"
+		match-catalog="cer_db">
+	</table-filter>
+	<table-filter match-name="documentoadjuntodatoadicional"
+		match-catalog="cer_db">
+	</table-filter>
+	<table-filter match-name="estadodocumento" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="facultad" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="memorando" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="oficio" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="resolucion" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="solicitante" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="solicitud" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="tipodocumento" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="tiporesolucion" match-catalog="cer_db"></table-filter>
+</hibernate-reverse-engineering>

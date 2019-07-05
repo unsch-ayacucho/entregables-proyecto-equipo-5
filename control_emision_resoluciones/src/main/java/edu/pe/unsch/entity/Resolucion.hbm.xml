@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 04-jul-2019 20:41:26 by Hibernate Tools 5.1.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="cer_db" dynamic-insert="false" dynamic-update="false" mutable="true" name="pe.edu.unsch.entity.Resolucion" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="resolucion">
+        <id name="idResolucion" type="java.lang.Integer">
+            <column name="id_resolucion"/>
+            <generator class="foreign">
+                <param name="property">documento</param>
+            </generator>
+        </id>
+        <one-to-one class="pe.edu.unsch.entity.Documento" constrained="true" embed-xml="true" name="documento"/>
+        <property generated="never" lazy="false" name="idTipoResolucion" optimistic-lock="true" type="int" unique="false">
+            <column name="id_tipo_resolucion" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="codigoResolucion" optimistic-lock="true" type="string" unique="false">
+            <column length="60" name="codigo_resolucion" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="codFacultad" optimistic-lock="true" type="char" unique="false">
+            <column length="1" name="cod_facultad" not-null="true"/>
+        </property>
+        <one-to-one class="pe.edu.unsch.entity.Tiporesolucion" constrained="false" embed-xml="true" name="tiporesolucion"/>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="consideracionresolucions" optimistic-lock="true" sort="unsorted" table="consideracionresolucion">
+            <key on-delete="noaction">
+                <column name="id_resolucion" not-null="true"/>
+            </key>
+            <one-to-many class="pe.edu.unsch.entity.Consideracionresolucion" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="facultads" optimistic-lock="true" sort="unsorted" table="facultad">
+            <key on-delete="noaction">
+                <column length="1" name="cod_facultad" unique="true"/>
+            </key>
+            <one-to-many class="pe.edu.unsch.entity.Facultad" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

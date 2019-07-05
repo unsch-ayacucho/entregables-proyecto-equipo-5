@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 04-jul-2019 20:41:26 by Hibernate Tools 5.1.10.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="cer_db" dynamic-insert="false" dynamic-update="false" mutable="true" name="pe.edu.unsch.entity.Solicitante" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="solicitante">
+        <id name="idSolicitante" type="java.lang.Integer">
+            <column name="id_solicitante"/>
+            <generator class="foreign">
+                <param name="property">documento</param>
+            </generator>
+        </id>
+        <one-to-one class="pe.edu.unsch.entity.Documento" constrained="true" embed-xml="true" name="documento"/>
+        <property generated="never" lazy="false" name="nombres" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="nombres" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="apellidoPaterno" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="apellido_paterno" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="apellidoMaterno" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="apellido_materno" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="codigo" optimistic-lock="true" type="char" unique="false">
+            <column length="1" name="codigo" not-null="true" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="dni" optimistic-lock="true" type="char" unique="false">
+            <column length="1" name="dni" not-null="true" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="direccion" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="direccion"/>
+        </property>
+    </class>
+</hibernate-mapping>
