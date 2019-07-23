@@ -8,5 +8,6 @@
   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cer_db</property>
   <property name="hibernate.connection.username">root</property>
   <mapping package="edu.pe.unsch.entity"/>
+  <mapping class="edu.pe.unsch.entity.Usuario"/>
  </session-factory>
 </hibernate-configuration>

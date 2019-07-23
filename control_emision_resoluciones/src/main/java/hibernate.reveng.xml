@@ -2,34 +2,89 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-	<table-filter match-name="adjunto" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="consideracion" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="consideracionresolucion"
+
+	<table-filter match-name="cc" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="dictamen" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="documento_origen"
 		match-catalog="cer_db">
 	</table-filter>
-	<table-filter match-name="datoadicional" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="decreto" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="decretosresolucion"
+	<table-filter match-name="escuela_profesional"
 		match-catalog="cer_db">
 	</table-filter>
-	<table-filter match-name="destinatario" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="detalledocumento"
-		match-catalog="cer_db">
-	</table-filter>
-	<table-filter match-name="documento" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="documentoadjunto"
-		match-catalog="cer_db">
-	</table-filter>
-	<table-filter match-name="documentoadjuntodatoadicional"
-		match-catalog="cer_db">
-	</table-filter>
-	<table-filter match-name="estadodocumento" match-catalog="cer_db"></table-filter>
 	<table-filter match-name="facultad" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="memorando" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="oficio" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="firma" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="fundamento" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="persona" match-catalog="cer_db"></table-filter>
 	<table-filter match-name="resolucion" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="solicitante" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="solicitud" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="tipodocumento" match-catalog="cer_db"></table-filter>
-	<table-filter match-name="tiporesolucion" match-catalog="cer_db"></table-filter>
+	<table-filter match-name="usuario" match-catalog="cer_db"></table-filter>
+	<table catalog="cer_db" name="cc">
+		<column name="id_cc"></column>
+		<column name="despacho"></column>
+		<column name="id_resolucion"></column>
+	</table>
+	<table catalog="cer_db" name="dictamen">
+		<column name="id_decreto_resolucion"></column>
+		<column name="contenido"></column>
+		<column name="id_resolucion"></column>
+		<column name="nro_articulo"></column>
+	</table>
+	<table catalog="cer_db" name="documento_origen">
+		<column name="id_documento_origen"></column>
+		<column name="codigo_documento_origen"></column>
+		<column name="id_persona"></column>
+		<column name="descripcion"></column>
+		<column name="estado_documento_origen"></column>
+		<column name="fecha_presentacion"></column>
+	</table>
+	<table catalog="cer_db" name="escuela_profesional">
+		<column name="id_escuela_profesional"></column>
+		<column name="nombre_escuela_profesional"></column>
+	</table>
+	<table catalog="cer_db" name="facultad">
+		<column name="id_facultad"></column>
+		<column name="nombre_facultad"></column>
+		<column name="codigo_facultad"></column>
+	</table>
+	<table catalog="cer_db" name="firma">
+		<column name="id_firma"></column>
+		<column name="nombre_firma"></column>
+		<column name="cargo"></column>
+		<column name="firma_digital"></column>
+	</table>
+	<table catalog="cer_db" name="fundamento">
+		<column name="id_consideracion_resolucion"></column>
+		<column name="id_resolucion"></column>
+		<column name="considerando"></column>
+	</table>
+	<table catalog="cer_db" name="persona">
+		<column name="id_persona"></column>
+		<column name="cargo"></column>
+		<column name="apellido_materno"></column>
+		<column name="codigo"></column>
+		<column name="direccion"></column>
+		<column name="nombres"></column>
+		<column name="apellido_paterno"></column>
+		<column name="dni"></column>
+	</table>
+	<table catalog="cer_db" name="resolucion">
+		<column name="id_resolucion"></column>
+		<column name="id_facultad"></column>
+		<column name="codigo_resolucion"></column>
+		<column name="fecha_emision"></column>
+		<column name="id_escuela_profesional"></column>
+		<column name="id_documento_origen"></column>
+		<column name="lugar"></column>
+		<column name="id_firma"></column>
+		<column name="tipo_resolucion"></column>
+	</table>
+	<table catalog="cer_db" name="usuario">
+		<column name="id_usuario"></column>
+		<column name="email"></column>
+		<column name="cargo"></column>
+		<column name="rol"></column>
+		<column name="foto"></column>
+		<column name="password"></column>
+		<column name="ultimo_login"></column>
+		<column name="id_firma"></column>
+	</table>
 </hibernate-reverse-engineering>
