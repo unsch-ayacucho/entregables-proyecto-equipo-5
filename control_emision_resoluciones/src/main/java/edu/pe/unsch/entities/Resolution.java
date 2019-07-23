@@ -53,15 +53,16 @@ public class Resolution implements java.io.Serializable {
 	
 	@Size(max = 1000)
 	@Column(name = "tipo")
-	private int tipo; // este es como debe venir desde Angular
+	private long tipo; // este es como debe venir desde Angular
 	
 	@Column(name = "	estado")
 	private boolean	estado; // este es como debe venir desde Angular
 	
-	@Column(name = "idorigen")
+	//@Column(name = "idorigen")
+	@OneToOne()
+	@JoinColumn(name = "idorigen", referencedColumnName = "idorigen")
 	private Origen	idorigen; // este es como debe venir desde Angular
 
-	
 	
 	public Resolution() {
 		
@@ -69,12 +70,19 @@ public class Resolution implements java.io.Serializable {
 
 
 
+	public Resolution(Long idresolution) {
+		
+		this.idresolution = idresolution;
+	}
+
+
+
 	public Resolution(Long idresolution, @NotNull @Size(max = 50) String coderesolution,
 			@NotNull @Size(max = 50) String fechacreation, @NotNull @Size(max = 1000) String visto,
 			@Size(max = 1000) String presentado, @Size(max = 1000) String considerando,
-			@Size(max = 1000) String resuelve, @Size(max = 1000) String cc, @Size(max = 1000) int tipo, boolean estado,
+			@Size(max = 1000) String resuelve, @Size(max = 1000) String cc, @Size(max = 1000) long tipo, boolean estado,
 			Origen idorigen) {
-		super();
+		
 		this.idresolution = idresolution;
 		this.coderesolution = coderesolution;
 		this.fechacreation = fechacreation;
@@ -154,11 +162,11 @@ public class Resolution implements java.io.Serializable {
 		this.cc = cc;
 	}
 
-	public int getTipo() {
+	public long getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(int tipo) {
+	public void setTipo(long tipo) {
 		this.tipo = tipo;
 	}
 

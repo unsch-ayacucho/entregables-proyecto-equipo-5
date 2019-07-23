@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,6 +17,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+@RestController
 public class PersonaController {
 
 	@Autowired
@@ -27,7 +27,6 @@ public class PersonaController {
 	protected ObjectMapper objPersona;
 	
 	
-	// @PostMapping("/SaveOpdatePersona")
     @RequestMapping(value = "/SaveOpdatePersona", method = RequestMethod.POST)
 	public Persona GuardarPersona(@RequestBody String jsonPersona) 
 			throws JsonParseException, JsonMappingException, IOException {		

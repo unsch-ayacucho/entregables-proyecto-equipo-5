@@ -38,9 +38,16 @@ public class Origen implements java.io.Serializable {
 
 
 
+	public Origen(Long idorigen) {
+		
+		this.idorigen = idorigen;
+	}
+
+
+
 	public Origen(Long idorigen, @NotNull @Size(min = 1, max = 200) String codedocorigen, String description,
 			String fechapresen, Persona idpersona) {
-		super();
+		
 		this.idorigen = idorigen;
 		this.codedocorigen = codedocorigen;
 		this.description = description;

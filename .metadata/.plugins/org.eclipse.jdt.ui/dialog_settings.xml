@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="false" key="updateQualifiedNames"/>
+		<item value="*" key="patterns"/>
+		<item value="false" key="updateSimilarElements"/>
+		<item value="1" key="updateSimilarElementsMatchStrategy"/>
+		<item value="false" key="updateTextualMatches"/>
+	</section>
 	<section name="GenerateConstructorUsingFieldsSelectionDialog">
 		<item value="false" key="OmitCallToSuper"/>
 	</section>
@@ -14,8 +21,8 @@
 		<item value="759" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|8.861539|0|WINDOWS|1|-16|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="909" key="DIALOG_HEIGHT"/>
-		<item value="590" key="DIALOG_X_ORIGIN"/>
-		<item value="9" key="DIALOG_Y_ORIGIN"/>
+		<item value="930" key="DIALOG_X_ORIGIN"/>
+		<item value="41" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>

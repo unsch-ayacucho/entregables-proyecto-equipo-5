@@ -1,0 +1,38 @@
+package edu.pe.unsch.service.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import edu.pe.unsch.dao.PersonaDAO;
+import edu.pe.unsch.dao.ResolutionDAO;
+import edu.pe.unsch.entities.Persona;
+import edu.pe.unsch.entities.Resolution;
+import edu.pe.unsch.service.ResolutionServ;
+
+@Service
+public class ResolucionesSrvlImplement implements ResolutionServ{
+
+	@Autowired
+	protected ResolutionDAO daoResolution;
+	
+	@Override
+	public List<Resolution> GetListaResolution() {
+		
+		return this.daoResolution.findAll();
+	}
+	
+	@Override
+	public Resolution SaveResolution(Resolution resolution) {
+		// TODO Auto-generated method stub		
+		
+		return this.daoResolution.save(resolution);
+	}
+
+	@Override
+	public List<Resolution> listResolutionByTipo(int tipo) {
+		// TODO Auto-generated method stub
+		return this.daoResolution.listResolutionByTipo(tipo);
+	}
+}

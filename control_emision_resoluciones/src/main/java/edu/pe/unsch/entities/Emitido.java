@@ -26,6 +26,7 @@ public class Emitido implements java.io.Serializable{
 	public Emitido() {
 		
 	}
+	
 
 	public Emitido(Long idemitido, String fechaemitida, Resolution idresolution) {
 		super();
