@@ -1,8 +1,0 @@
-package edu.pe.unsch.controller;
-
-import org.springframework.stereotype.Controller;
-
-@Controllerroller
-public class LoginController {
-
-}
