@@ -1,0 +1,5 @@
+package edu.pe.unsch.service;
+
+public interface EmitidoServ {
+
+}

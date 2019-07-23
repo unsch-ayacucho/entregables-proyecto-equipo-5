@@ -1,0 +1,11 @@
+package pe.edu.unsch.entities;
+
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "producto")
+@Access(AccessType.FIELD)
+public class Producto implements java.io.Serializable

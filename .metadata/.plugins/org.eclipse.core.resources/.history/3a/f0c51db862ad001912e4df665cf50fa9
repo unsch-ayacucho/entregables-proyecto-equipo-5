@@ -1,0 +1,8 @@
+package edu.pe.unsch.service;
+
+import java.util.List;
+import pe.edu.unsch.entities.Resolution;
+public interface ResolutionServ {
+	Resolution SaveProduct(Resolution product);
+	List<Resolution> GetListaProducto();
+}

@@ -1,0 +1,63 @@
+package pe.edu.unsch.entities;
+
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "resolution")
+@Access(AccessType.FIELD)
+public class Resolution implements java.io.Serializable {
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //Para q el id sea Autoincrementable
+	private Long idresolution;
+	
+	@Basic(optional = false)
+	@NotNull
+	@Size(min = 1, max = 50)
+	@Column(name = "coderesolution")
+	private String coderesolution; // este es como debe venir desde Angular
+	
+	@NotNull
+	@Size(min = 1, max = 50)
+	@Column(name = "fechacreation")
+	private String fechacreation; // este es como debe venir desde Angular
+	
+	@NotNull
+	@Size(min = 1, max = 1000)
+	@Column(name = "visto")
+	private String visto; // este es como debe venir desde Angular
+	
+	@NotNull
+	@Size(min = 1, max = 1000)
+	@Column(name = "presentado")
+	private String presentado; // este es como debe venir desde Angular
+	
+	@NotNull
+	@Size(min = 1, max = 1000)
+	@Column(name = "considerando")
+	private String considerando; // este es como debe venir desde Angular
+	
+	@NotNull
+	@Size(min = 1, max = 1000)
+	@Column(name = "resuelve")
+	private String resuelve; // este es como debe venir desde Angular
+	
+	@NotNull
+	@Size(min = 1, max = 1000)
+	@Column(name = "cc")
+	private String cc; // este es como debe venir desde Angular
+	
+	@NotNull
+	@Size(min = 1, max = 1000)
+	@Column(name = "tipo")
+	private int tipo; // este es como debe venir desde Angular
+	
+	@Column(name = "	estado")
+	private boolean	estado; // este es como debe venir desde Angular
+	
+	@Column(name = "idorigen")
+	private Origen	idorigen; // este es como debe venir desde Angular
+}

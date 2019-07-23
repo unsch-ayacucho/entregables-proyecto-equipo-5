@@ -1,0 +1,10 @@
+package edu.pe.unsch.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+import pe.edu.unsch.entities.Resolution;
+
+public interface ResolutionDAO extends JpaRepository<Resolution, Long>{
+
+}
