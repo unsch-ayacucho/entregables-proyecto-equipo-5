@@ -19,7 +19,9 @@ public class LoginController {
 	UsuarioLoginService loginService;
 	
 	@GetMapping({"/", "/login"})
-	public String index() {
+	public String index(Model model) {
+		
+		model.addAttribute("fail", false);
 		
 		return "/admin/login/index";
 	}
@@ -33,6 +35,7 @@ public class LoginController {
 								);
 		
 		model.addAttribute("usuario", usuario);
+		model.addAttribute("fail", true);
 		
 		return usuario == null? "redirect:/login" : "redirect:/admin/home";
 		
