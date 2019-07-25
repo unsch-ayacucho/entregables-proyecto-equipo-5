@@ -1,13 +1,11 @@
 package edu.pe.unsch.entity;
-// Generated 21-jul-2019 23:43:06 by Hibernate Tools 5.1.10.Final
+// Generated 24-jul-2019 22:01:25 by Hibernate Tools 5.1.10.Final
 
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -20,7 +18,7 @@ import javax.persistence.UniqueConstraint;
 @Table(name = "firma", catalog = "cer_db", uniqueConstraints = @UniqueConstraint(columnNames = "nombre_firma"))
 public class Firma implements java.io.Serializable {
 
-	private Integer idFirma;
+	private int idFirma;
 	private String nombreFirma;
 	private byte[] firmaDigital;
 	private String cargo;
@@ -31,13 +29,15 @@ public class Firma implements java.io.Serializable {
 	public Firma() {
 	}
 
-	public Firma(String nombreFirma, byte[] firmaDigital) {
+	public Firma(int idFirma, String nombreFirma, byte[] firmaDigital) {
+		this.idFirma = idFirma;
 		this.nombreFirma = nombreFirma;
 		this.firmaDigital = firmaDigital;
 	}
 
-	public Firma(String nombreFirma, byte[] firmaDigital, String cargo, Set<Resolucion> resolucions,
+	public Firma(int idFirma, String nombreFirma, byte[] firmaDigital, String cargo, Set<Resolucion> resolucions,
 			Set<Usuario> usuarios, Set<Usuario> usuarios_1) {
+		this.idFirma = idFirma;
 		this.nombreFirma = nombreFirma;
 		this.firmaDigital = firmaDigital;
 		this.cargo = cargo;
@@ -47,14 +47,13 @@ public class Firma implements java.io.Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_firma", unique = true, nullable = false)
-	public Integer getIdFirma() {
+	public int getIdFirma() {
 		return this.idFirma;
 	}
 
-	public void setIdFirma(Integer idFirma) {
+	public void setIdFirma(int idFirma) {
 		this.idFirma = idFirma;
 	}
 

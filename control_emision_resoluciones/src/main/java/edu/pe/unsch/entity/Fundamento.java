@@ -1,11 +1,9 @@
 package edu.pe.unsch.entity;
-// Generated 21-jul-2019 23:43:06 by Hibernate Tools 5.1.10.Final
+// Generated 24-jul-2019 22:01:25 by Hibernate Tools 5.1.10.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -18,27 +16,27 @@ import javax.persistence.Table;
 @Table(name = "fundamento", catalog = "cer_db")
 public class Fundamento implements java.io.Serializable {
 
-	private Integer idConsideracionResolucion;
+	private int idConsideracionResolucion;
 	private Resolucion resolucion;
 	private String considerando;
 
 	public Fundamento() {
 	}
 
-	public Fundamento(Resolucion resolucion, String considerando) {
+	public Fundamento(int idConsideracionResolucion, Resolucion resolucion, String considerando) {
+		this.idConsideracionResolucion = idConsideracionResolucion;
 		this.resolucion = resolucion;
 		this.considerando = considerando;
 	}
 
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_consideracion_resolucion", unique = true, nullable = false)
-	public Integer getIdConsideracionResolucion() {
+	public int getIdConsideracionResolucion() {
 		return this.idConsideracionResolucion;
 	}
 
-	public void setIdConsideracionResolucion(Integer idConsideracionResolucion) {
+	public void setIdConsideracionResolucion(int idConsideracionResolucion) {
 		this.idConsideracionResolucion = idConsideracionResolucion;
 	}
 

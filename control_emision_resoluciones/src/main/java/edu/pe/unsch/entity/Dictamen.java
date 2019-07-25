@@ -1,11 +1,9 @@
 package edu.pe.unsch.entity;
-// Generated 21-jul-2019 23:43:06 by Hibernate Tools 5.1.10.Final
+// Generated 24-jul-2019 22:01:25 by Hibernate Tools 5.1.10.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -18,7 +16,7 @@ import javax.persistence.Table;
 @Table(name = "dictamen", catalog = "cer_db")
 public class Dictamen implements java.io.Serializable {
 
-	private Integer idDecretoResolucion;
+	private int idDecretoResolucion;
 	private Resolucion resolucion;
 	private int nroArticulo;
 	private String contenido;
@@ -26,21 +24,21 @@ public class Dictamen implements java.io.Serializable {
 	public Dictamen() {
 	}
 
-	public Dictamen(Resolucion resolucion, int nroArticulo, String contenido) {
+	public Dictamen(int idDecretoResolucion, Resolucion resolucion, int nroArticulo, String contenido) {
+		this.idDecretoResolucion = idDecretoResolucion;
 		this.resolucion = resolucion;
 		this.nroArticulo = nroArticulo;
 		this.contenido = contenido;
 	}
 
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_decreto_resolucion", unique = true, nullable = false)
-	public Integer getIdDecretoResolucion() {
+	public int getIdDecretoResolucion() {
 		return this.idDecretoResolucion;
 	}
 
-	public void setIdDecretoResolucion(Integer idDecretoResolucion) {
+	public void setIdDecretoResolucion(int idDecretoResolucion) {
 		this.idDecretoResolucion = idDecretoResolucion;
 	}
 

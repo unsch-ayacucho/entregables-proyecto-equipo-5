@@ -1,13 +1,11 @@
 package edu.pe.unsch.entity;
-// Generated 21-jul-2019 23:43:06 by Hibernate Tools 5.1.10.Final
+// Generated 24-jul-2019 22:01:25 by Hibernate Tools 5.1.10.Final
 
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -21,7 +19,7 @@ import javax.persistence.UniqueConstraint;
 		@UniqueConstraint(columnNames = "dni") })
 public class Persona implements java.io.Serializable {
 
-	private Integer idPersona;
+	private int idPersona;
 	private String nombres;
 	private String apellidoPaterno;
 	private String apellidoMaterno;
@@ -34,8 +32,9 @@ public class Persona implements java.io.Serializable {
 	public Persona() {
 	}
 
-	public Persona(String nombres, String apellidoPaterno, String apellidoMaterno, String dni, String direccion,
-			String codigo) {
+	public Persona(int idPersona, String nombres, String apellidoPaterno, String apellidoMaterno, String dni,
+			String direccion, String codigo) {
+		this.idPersona = idPersona;
 		this.nombres = nombres;
 		this.apellidoPaterno = apellidoPaterno;
 		this.apellidoMaterno = apellidoMaterno;
@@ -44,8 +43,9 @@ public class Persona implements java.io.Serializable {
 		this.codigo = codigo;
 	}
 
-	public Persona(String nombres, String apellidoPaterno, String apellidoMaterno, String cargo, String dni,
-			String direccion, String codigo, Set<DocumentoOrigen> documentoOrigens) {
+	public Persona(int idPersona, String nombres, String apellidoPaterno, String apellidoMaterno, String cargo,
+			String dni, String direccion, String codigo, Set<DocumentoOrigen> documentoOrigens) {
+		this.idPersona = idPersona;
 		this.nombres = nombres;
 		this.apellidoPaterno = apellidoPaterno;
 		this.apellidoMaterno = apellidoMaterno;
@@ -57,14 +57,13 @@ public class Persona implements java.io.Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_persona", unique = true, nullable = false)
-	public Integer getIdPersona() {
+	public int getIdPersona() {
 		return this.idPersona;
 	}
 
-	public void setIdPersona(Integer idPersona) {
+	public void setIdPersona(int idPersona) {
 		this.idPersona = idPersona;
 	}
 

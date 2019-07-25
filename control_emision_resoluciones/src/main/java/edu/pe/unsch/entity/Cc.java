@@ -1,11 +1,9 @@
 package edu.pe.unsch.entity;
-// Generated 21-jul-2019 23:43:06 by Hibernate Tools 5.1.10.Final
+// Generated 24-jul-2019 22:01:25 by Hibernate Tools 5.1.10.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -18,31 +16,32 @@ import javax.persistence.Table;
 @Table(name = "cc", catalog = "cer_db")
 public class Cc implements java.io.Serializable {
 
-	private Integer idCc;
+	private int idCc;
 	private Resolucion resolucion;
 	private String despacho;
 
 	public Cc() {
 	}
 
-	public Cc(String despacho) {
+	public Cc(int idCc, String despacho) {
+		this.idCc = idCc;
 		this.despacho = despacho;
 	}
 
-	public Cc(Resolucion resolucion, String despacho) {
+	public Cc(int idCc, Resolucion resolucion, String despacho) {
+		this.idCc = idCc;
 		this.resolucion = resolucion;
 		this.despacho = despacho;
 	}
 
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_cc", unique = true, nullable = false)
-	public Integer getIdCc() {
+	public int getIdCc() {
 		return this.idCc;
 	}
 
-	public void setIdCc(Integer idCc) {
+	public void setIdCc(int idCc) {
 		this.idCc = idCc;
 	}
 

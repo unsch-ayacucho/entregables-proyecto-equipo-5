@@ -1,5 +1,5 @@
 package edu.pe.unsch.entity;
-// Generated 21-jul-2019 23:43:06 by Hibernate Tools 5.1.10.Final
+// Generated 24-jul-2019 22:01:25 by Hibernate Tools 5.1.10.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -7,8 +7,6 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -25,11 +23,7 @@ import javax.persistence.UniqueConstraint;
 @Table(name = "resolucion", catalog = "cer_db", uniqueConstraints = @UniqueConstraint(columnNames = "codigo_resolucion"))
 public class Resolucion implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private Integer idResolucion;
+	private int idResolucion;
 	private DocumentoOrigen documentoOrigen;
 	private EscuelaProfesional escuelaProfesional;
 	private Facultad facultad;
@@ -45,17 +39,19 @@ public class Resolucion implements java.io.Serializable {
 	public Resolucion() {
 	}
 
-	public Resolucion(DocumentoOrigen documentoOrigen, Facultad facultad, String tipoResolucion,
+	public Resolucion(int idResolucion, DocumentoOrigen documentoOrigen, Facultad facultad, String tipoResolucion,
 			String codigoResolucion) {
+		this.idResolucion = idResolucion;
 		this.documentoOrigen = documentoOrigen;
 		this.facultad = facultad;
 		this.tipoResolucion = tipoResolucion;
 		this.codigoResolucion = codigoResolucion;
 	}
 
-	public Resolucion(DocumentoOrigen documentoOrigen, EscuelaProfesional escuelaProfesional, Facultad facultad,
-			Firma firma, String tipoResolucion, String codigoResolucion, String lugar, Date fechaEmision,
-			Set<Fundamento> fundamentos, Set<Cc> ccs, Set<Dictamen> dictamens) {
+	public Resolucion(int idResolucion, DocumentoOrigen documentoOrigen, EscuelaProfesional escuelaProfesional,
+			Facultad facultad, Firma firma, String tipoResolucion, String codigoResolucion, String lugar,
+			Date fechaEmision, Set<Fundamento> fundamentos, Set<Cc> ccs, Set<Dictamen> dictamens) {
+		this.idResolucion = idResolucion;
 		this.documentoOrigen = documentoOrigen;
 		this.escuelaProfesional = escuelaProfesional;
 		this.facultad = facultad;
@@ -70,14 +66,13 @@ public class Resolucion implements java.io.Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_resolucion", unique = true, nullable = false)
-	public Integer getIdResolucion() {
+	public int getIdResolucion() {
 		return this.idResolucion;
 	}
 
-	public void setIdResolucion(Integer idResolucion) {
+	public void setIdResolucion(int idResolucion) {
 		this.idResolucion = idResolucion;
 	}
 

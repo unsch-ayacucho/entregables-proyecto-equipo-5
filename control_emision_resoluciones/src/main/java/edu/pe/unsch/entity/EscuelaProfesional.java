@@ -1,13 +1,11 @@
 package edu.pe.unsch.entity;
-// Generated 21-jul-2019 23:43:06 by Hibernate Tools 5.1.10.Final
+// Generated 24-jul-2019 22:01:25 by Hibernate Tools 5.1.10.Final
 
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -19,31 +17,32 @@ import javax.persistence.Table;
 @Table(name = "escuela_profesional", catalog = "cer_db")
 public class EscuelaProfesional implements java.io.Serializable {
 
-	private Integer idEscuelaProfesional;
+	private int idEscuelaProfesional;
 	private String nombreEscuelaProfesional;
 	private Set<Resolucion> resolucions = new HashSet<Resolucion>(0);
 
 	public EscuelaProfesional() {
 	}
 
-	public EscuelaProfesional(String nombreEscuelaProfesional) {
+	public EscuelaProfesional(int idEscuelaProfesional, String nombreEscuelaProfesional) {
+		this.idEscuelaProfesional = idEscuelaProfesional;
 		this.nombreEscuelaProfesional = nombreEscuelaProfesional;
 	}
 
-	public EscuelaProfesional(String nombreEscuelaProfesional, Set<Resolucion> resolucions) {
+	public EscuelaProfesional(int idEscuelaProfesional, String nombreEscuelaProfesional, Set<Resolucion> resolucions) {
+		this.idEscuelaProfesional = idEscuelaProfesional;
 		this.nombreEscuelaProfesional = nombreEscuelaProfesional;
 		this.resolucions = resolucions;
 	}
 
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_escuela_profesional", unique = true, nullable = false)
-	public Integer getIdEscuelaProfesional() {
+	public int getIdEscuelaProfesional() {
 		return this.idEscuelaProfesional;
 	}
 
-	public void setIdEscuelaProfesional(Integer idEscuelaProfesional) {
+	public void setIdEscuelaProfesional(int idEscuelaProfesional) {
 		this.idEscuelaProfesional = idEscuelaProfesional;
 	}
 

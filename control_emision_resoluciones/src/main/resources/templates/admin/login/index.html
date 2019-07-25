@@ -83,10 +83,8 @@ wf-roboto-n6-active wf-roboto-n7-active wf-active">
 								</h3>
 							</div>
 							<form class="m-login__form m-form" th:action="@{/login}" method="post">
-								<div th:if="${usuario} == null" class="form-group m-form__group">
-									<div class="alert">
-										<h6 class="m-alert__text">Usuario o contraseña incorrecta.</h1>
-									</div>
+								<div  class="form-group m-form__group">
+									<h6 th:text="${fail}"  class="m-alert__text"></h1>
 								</div>
 								<div class="form-group m-form__group">
 									<input class="form-control m-input" type="email" placeholder="Correo electrónico" name="email" autocomplete="on">
@@ -141,7 +139,7 @@ wf-roboto-n6-active wf-roboto-n7-active wf-active">
 									<div class="col m--align-left">
 										<label class="m-checkbox m-checkbox--light">
 											<input type="checkbox" name="agree">
-											Estoy de acuerdo con losm con me jales
+											Estoy de acuerdo con los
 											<a href="#" class="m-link m-link--focus">
 												terminos y condiciones
 											</a>
@@ -165,10 +163,10 @@ wf-roboto-n6-active wf-roboto-n7-active wf-active">
 						<div class="m-login__forget-password">
 							<div class="m-login__head">
 								<h3 class="m-login__title">
-									Olvidaste tu contraseña por  gil?
+									Olvidaste tu contraseña?
 								</h3>
 								<div class="m-login__desc">
-									Ingresa tu correo para resetear tu contraseña fast:
+									Ingresa tu correo para resetear tu contraseña
 								</div>
 							</div>
 							<form class="m-login__form m-form" action="">
@@ -177,7 +175,7 @@ wf-roboto-n6-active wf-roboto-n7-active wf-active">
 								</div>
 								<div class="m-login__form-action">
 									<button id="m_login_forget_password_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn m-login__btn--primary">
-										Request
+										Solicitar
 									</button>
 									&nbsp;&nbsp;
 									<button id="m_login_forget_password_cancel" class="btn btn-outline-focus m-btn m-btn--pill m-btn--custom  m-login__btn">
@@ -188,7 +186,7 @@ wf-roboto-n6-active wf-roboto-n7-active wf-active">
 						</div>
 						<div class="m-login__account">
 							<span class="m-login__account-msg">
-								No tienes una cuenta aún por mamon?
+								No tienes una cuenta?
 							</span>
 							&nbsp;&nbsp;
 							<a href="javascript:;" id="m_login_signup" class="m-link m-link--light m-login__account-link">

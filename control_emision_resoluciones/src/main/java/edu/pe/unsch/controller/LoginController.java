@@ -21,8 +21,6 @@ public class LoginController {
 	@GetMapping({"/", "/login"})
 	public String index(Model model) {
 		
-		model.addAttribute("fail", false);
-		
 		return "/admin/login/index";
 	}
 	
@@ -34,8 +32,12 @@ public class LoginController {
 								request.getParameter("password")
 								);
 		
+		if(usuario == null) {
+		
+			model.addAttribute("fail", "Usuario o contraseña incorrectos.");
+		}
+		
 		model.addAttribute("usuario", usuario);
-		model.addAttribute("fail", true);
 		
 		return usuario == null? "redirect:/login" : "redirect:/admin/home";
 		

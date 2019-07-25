@@ -1,5 +1,5 @@
 package edu.pe.unsch.entity;
-// Generated 21-jul-2019 23:43:06 by Hibernate Tools 5.1.10.Final
+// Generated 24-jul-2019 22:01:25 by Hibernate Tools 5.1.10.Final
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -20,12 +20,8 @@ import javax.persistence.UniqueConstraint;
  */
 @Entity
 @Table(name = "usuario", catalog = "cer_db", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class Usuario implements java.io.Serializable, UsuarioEntity {
+public class Usuario implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Integer idUsuario;
 	private Firma firma;
 	private String email;
@@ -56,7 +52,6 @@ public class Usuario implements java.io.Serializable, UsuarioEntity {
 		this.foto = foto;
 	}
 
-	@Override
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 
@@ -65,86 +60,71 @@ public class Usuario implements java.io.Serializable, UsuarioEntity {
 		return this.idUsuario;
 	}
 
-	@Override
 	public void setIdUsuario(Integer idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 
-	@Override
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_firma")
 	public Firma getFirma() {
 		return this.firma;
 	}
 
-	@Override
 	public void setFirma(Firma firma) {
 		this.firma = firma;
 	}
 
-	@Override
 	@Column(name = "email", unique = true, nullable = false, length = 60)
 	public String getEmail() {
 		return this.email;
 	}
 
-	@Override
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-	@Override
 	@Column(name = "password", nullable = false, length = 512)
 	public String getPassword() {
 		return this.password;
 	}
 
-	@Override
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	@Override
 	@Column(name = "cargo", nullable = false, length = 19)
 	public String getCargo() {
 		return this.cargo;
 	}
 
-	@Override
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
 
-	@Override
 	@Column(name = "rol", nullable = false, length = 24)
 	public String getRol() {
 		return this.rol;
 	}
 
-	@Override
 	public void setRol(String rol) {
 		this.rol = rol;
 	}
 
-	@Override
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "ultimo_login", length = 19)
 	public Date getUltimoLogin() {
 		return this.ultimoLogin;
 	}
 
-	@Override
 	public void setUltimoLogin(Date ultimoLogin) {
 		this.ultimoLogin = ultimoLogin;
 	}
 
-	@Override
 	@Column(name = "foto")
 	public byte[] getFoto() {
 		return this.foto;
 	}
 
-	@Override
 	public void setFoto(byte[] foto) {
 		this.foto = foto;
 	}

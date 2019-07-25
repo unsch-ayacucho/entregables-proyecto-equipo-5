@@ -1,5 +1,5 @@
 package edu.pe.unsch.entity;
-// Generated 21-jul-2019 23:43:06 by Hibernate Tools 5.1.10.Final
+// Generated 24-jul-2019 22:01:25 by Hibernate Tools 5.1.10.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -7,8 +7,6 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -24,7 +22,7 @@ import javax.persistence.TemporalType;
 @Table(name = "documento_origen", catalog = "cer_db")
 public class DocumentoOrigen implements java.io.Serializable {
 
-	private Integer idDocumentoOrigen;
+	private int idDocumentoOrigen;
 	private Persona persona;
 	private String codigoDocumentoOrigen;
 	private String descripcion;
@@ -36,14 +34,18 @@ public class DocumentoOrigen implements java.io.Serializable {
 	public DocumentoOrigen() {
 	}
 
-	public DocumentoOrigen(String codigoDocumentoOrigen, String descripcion, String estadoDocumentoOrigen) {
+	public DocumentoOrigen(int idDocumentoOrigen, String codigoDocumentoOrigen, String descripcion,
+			String estadoDocumentoOrigen) {
+		this.idDocumentoOrigen = idDocumentoOrigen;
 		this.codigoDocumentoOrigen = codigoDocumentoOrigen;
 		this.descripcion = descripcion;
 		this.estadoDocumentoOrigen = estadoDocumentoOrigen;
 	}
 
-	public DocumentoOrigen(Persona persona, String codigoDocumentoOrigen, String descripcion, Date fechaPresentacion,
-			String estadoDocumentoOrigen, Set<Resolucion> resolucions, Set<Resolucion> resolucions_1) {
+	public DocumentoOrigen(int idDocumentoOrigen, Persona persona, String codigoDocumentoOrigen, String descripcion,
+			Date fechaPresentacion, String estadoDocumentoOrigen, Set<Resolucion> resolucions,
+			Set<Resolucion> resolucions_1) {
+		this.idDocumentoOrigen = idDocumentoOrigen;
 		this.persona = persona;
 		this.codigoDocumentoOrigen = codigoDocumentoOrigen;
 		this.descripcion = descripcion;
@@ -54,14 +56,13 @@ public class DocumentoOrigen implements java.io.Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "id_documento_origen", unique = true, nullable = false)
-	public Integer getIdDocumentoOrigen() {
+	public int getIdDocumentoOrigen() {
 		return this.idDocumentoOrigen;
 	}
 
-	public void setIdDocumentoOrigen(Integer idDocumentoOrigen) {
+	public void setIdDocumentoOrigen(int idDocumentoOrigen) {
 		this.idDocumentoOrigen = idDocumentoOrigen;
 	}
 

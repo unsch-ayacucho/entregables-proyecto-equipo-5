@@ -17,6 +17,6 @@ public class UsuarioLoginServiceImpl implements UsuarioLoginService {
 	
 	@Override
 	public UsuarioEntity login(String email, String pass) {
-		return usuarioDAO.login(email, pass);
+		return (UsuarioEntity) usuarioDAO.login(email, pass);
 	}
 }
