@@ -1,0 +1,36 @@
+package pe.edu.unsch.entities;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "persona")
+@Access(AccessType.FIELD)
+public class Persona implements java.io.Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //Para q el id sea Autoincrementable
+	private Long idpersona;
+	
+		// column es como debe ir en la BD
+		@Basic(optional = false)
+		@NotNull
+		@Size(min = 1, max = 150)
+		@Column(name = "nombre")
+		private String nombre; // este es como debe venir desde Angular	
+		
+		@Column(name = "apellidos")
+		private String apellidos;
+		
+		@Column(name = "dni")
+		private int dni;
+		
+		@Column(name = "codeuniversidad")
+		private int codeuniversidad;
+		
+		@Column(name = "direction")
+		private String direction;
+		
+}

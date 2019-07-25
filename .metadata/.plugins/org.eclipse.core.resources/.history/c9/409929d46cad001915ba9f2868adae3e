@@ -1,0 +1,7 @@
+spring.banner.location=classpath:banner.txt
+
+spring.cache.type=NONE
+spring.thymeleaf.cache=false
+spring.dataSource.url=jdbc:mysql://localhost/resoluciones?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+spring.dataSource.username=root
+spring.dataSource.driver-class-name=com.mysql.jdbc.Driver

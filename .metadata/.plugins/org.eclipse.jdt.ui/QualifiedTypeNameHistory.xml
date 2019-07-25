@@ -3,4 +3,23 @@
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="pe.edu.unsch.entities.Emitido"/>
+<fullyQualifiedTypeName name="pe.edu.unsch.entities.Origen"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.dao.PersonaDAO"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.service.PersonaServ"/>
+<fullyQualifiedTypeName name="pe.edu.unsch.entities.Persona"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.dao.OrigenDAO"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.entities.Origen"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.service.OrigenServ"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.service.ResolutionServ"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.dao.ResolutionDAO"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.entities.Resolution"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.service.EmitidoServ"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.entities.Emitido"/>
+<fullyQualifiedTypeName name="edu.pe.unsch.dao.EmitidoDAO"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 </qualifiedTypeNameHistroy>

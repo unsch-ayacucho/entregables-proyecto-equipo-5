@@ -1,0 +1,6 @@
+spring.banner.location=classpath:banner.txt
+
+spring.thymeleaf.cache=false
+#spring.dataSource.url=jdbc:mysql://localhost/resoluciones
+#spring.dataSource.username=root
+#spring.dataSource.driver-class-name=com.mysql.jdbc.Driver

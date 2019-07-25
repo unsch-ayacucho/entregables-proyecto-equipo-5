@@ -1,0 +1,35 @@
+package pe.edu.unsch.entities;
+
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "producto")
+@Access(AccessType.FIELD)
+public class Origen implements java.io.Serializable {
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //Para q el id sea Autoincrementable
+	private Long idorigen;
+	
+	@Basic(optional = false)
+	@NotNull
+	@Size(min = 1, max = 200)
+	@Column(name = "codedocorigen")
+	private String codedocorigen; // este es como debe venir desde Angular	
+	
+	@Column(name = "description")
+	private String description;
+	
+	@Column(name = "fechapresen")
+	private String fechapresen;
+	
+	@JoinColumn(name = "idpersona",referencedColumnName = "idpersona") //esto es para que no solo venga el ID si no toda la informacion de su llave foranea
+	@ManyToOne
+	private Persona idpersona;
+	
+	
+	
+}
